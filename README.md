@@ -1,3 +1,4 @@
+![Captura de pantalla 2024-08-21 093941](https://github.com/user-attachments/assets/2548ea70-194d-4dae-9342-fd6b214f2a30)
 
 
 Historia para la Kata: "La Fortaleza de las Contraseñas"
