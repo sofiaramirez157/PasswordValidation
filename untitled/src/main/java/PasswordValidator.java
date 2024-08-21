@@ -17,10 +17,9 @@ public class PasswordValidator {
          return "La contraseña debe contener al menos un dígito.";
      }
 
-     if (!password.matches(".*[!@#$%^&*()].*")){
+     if (!password.matches(".*[!@#$%^&*()].")){
          return "La contraseña debe contener al menos un carácter especial.";
      }
-
 
         return password;
     }
