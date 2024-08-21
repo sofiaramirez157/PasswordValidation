@@ -1,7 +1,5 @@
-import org.junit.Assert.*;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-
 
 public class PasswordValidatorTest {
 
@@ -9,31 +7,37 @@ public class PasswordValidatorTest {
 
     @Test
     void testPasswordLessThan8Characters() {
-        Assertions.assertFalse(passwordValidator.isValid("1234567"));
+        String resultado = passwordValidator.validate("1234567");
+        Assertions.assertEquals("La contraseña debe de contener al menos 8 letras", resultado);
     }
 
     @Test
     void testPasswordWithoutUppercase() {
-        Assertions.assertFalse(passwordValidator.isValid("abcdefg1!"));
+        String resultado = passwordValidator.validate("abcdefg1!");
+        Assertions.assertEquals("La contraseña debe de contener al menos una letra mayúscula.", resultado);
     }
 
     @Test
     void testPasswordWithoutLowercase() {
-        Assertions.assertFalse(passwordValidator.isValid("ABCDEFG1!"));
+        String resultado = passwordValidator.validate("ABCDEFG1!");
+        Assertions.assertEquals("La contraseña debe de contener al menos una letra minúscula.", resultado);
     }
 
     @Test
     void testPasswordWithoutDigit() {
-        Assertions.assertFalse(passwordValidator.isValid("Abcdefg!"));
+        String resultado = passwordValidator.validate("Abcdefg!");
+        Assertions.assertEquals("La contraseña debe contener al menos un dígito.", resultado);
     }
 
     @Test
     void testPasswordWithoutSpecialCharacter() {
-        Assertions.assertFalse(passwordValidator.isValid("Abcdefg1"));
+        String resultado = passwordValidator.validate("Abcdefg1");
+        Assertions.assertEquals("La contraseña debe contener al menos un carácter especial.", resultado);
     }
 
     @Test
     void testValidPassword() {
-        Assertions.assertTrue(passwordValidator.isValid("Abcdefg1!"));
+        String resultado = passwordValidator.validate("Abcdefg1!");
+        Assertions.assertEquals("Contraseña válida", resultado);
     }
 }
