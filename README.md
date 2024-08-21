@@ -19,8 +19,12 @@ Tu misión es ayudar a los aspirantes a crear contraseñas dignas de la Fortalez
 Requisitos para la Kata:
 
 Longitud Mínima: La contraseña debe tener al menos 8 caracteres.
+
 Letras Mayúsculas: La contraseña debe contener al menos una letra mayúscula.
+
 Letras Minúsculas: La contraseña debe contener al menos una letra minúscula.
+
 Números: La contraseña debe contener al menos un número.
+
 Caracteres Especiales: La contraseña debe contener al menos un carácter especial.
 
